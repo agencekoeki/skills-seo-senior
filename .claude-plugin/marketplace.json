@@ -1,0 +1,18 @@
+{
+  "name": "sebastien-grillot-seo",
+  "owner": {
+    "name": "Sébastien Grillot"
+  },
+  "metadata": {
+    "description": "Skills SEO senior pour Claude, par Sébastien Grillot (Kōeki, Kōcori)",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "seo-senior",
+      "description": "Neuf skills qui apprennent à l'IA à juger avant d'exécuter en SEO : un aiguilleur, le socle SAVOIR / PENSER, et sept fronts (demande client, valeur du trafic, gagnabilité d'une SERP, Search Console, cluster, maillage interne, citabilité GEO).",
+      "version": "1.0.0",
+      "source": "./"
+    }
+  ]
+}

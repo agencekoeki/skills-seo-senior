@@ -1,0 +1,21 @@
+{
+  "name": "seo-senior",
+  "displayName": "SEO senior",
+  "version": "1.0.0",
+  "description": "Neuf skills qui apprennent à l'IA à juger avant d'exécuter en SEO : un aiguilleur, le socle SAVOIR / PENSER, et sept fronts (demande client, valeur du trafic, gagnabilité d'une SERP, Search Console, cluster, maillage interne, citabilité GEO).",
+  "author": {
+    "name": "Sébastien Grillot",
+    "url": "https://www.kocori.co"
+  },
+  "homepage": "https://github.com/agencekoeki/skills-seo-senior",
+  "repository": "https://github.com/agencekoeki/skills-seo-senior",
+  "license": "GPL-3.0-only",
+  "keywords": [
+    "seo",
+    "geo",
+    "search-console",
+    "maillage-interne",
+    "cluster",
+    "francais"
+  ]
+}
