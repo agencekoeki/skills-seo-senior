@@ -1,0 +1,28 @@
+name: Contrôle
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  controle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validateur officiel de plugins (place de marché, plugin, skills)
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude plugin validate --strict .
+          mkdir -p /tmp/plugin && cp -r .claude-plugin skills /tmp/plugin/ && rm /tmp/plugin/.claude-plugin/marketplace.json
+          claude plugin validate --strict /tmp/plugin
+      - name: Scripts lisibles par Python
+        run: |
+          python -m py_compile skills/seo-search-console/scripts/gsc_lectures.py skills/seo-maillage-interne/scripts/maillage.py .github/scripts/empaqueter.py
+          python skills/seo-search-console/scripts/gsc_lectures.py --help > /dev/null
+          python skills/seo-maillage-interne/scripts/maillage.py --help > /dev/null
+      - name: Les .zip se fabriquent
+        run: python .github/scripts/empaqueter.py dist
